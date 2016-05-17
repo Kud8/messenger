@@ -45,8 +45,10 @@ public class ClientMain {
 
     public void init() {
         try {
-            Container container = new Container("C:\\Users\\Дмитрий\\Documents\\technotrack\\java\\messenger\\config.xml");
-            WebConnection portAndHost = (WebConnection)container.getByClass("arhangel.dim.container.beans.WebConnection");
+            Container container =
+                    new Container("C:\\Users\\Дмитрий\\Documents\\technotrack\\java\\messenger\\config.xml");
+            WebConnection portAndHost =
+                    (WebConnection)container.getByClass("arhangel.dim.container.beans.WebConnection");
             int port = portAndHost.getPort();
             String host = portAndHost.getHost();
             socket = new Socket(host, port);
